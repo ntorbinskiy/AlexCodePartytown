@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "start http://localhost:3000/ &next dev",
-    "build": "next build",
+    "build": "yarn run partytown && next build",
+    "partytown": "partytown copylib public/~partytown",
     "start": "next start",
     "lint": "next lint"
   },
