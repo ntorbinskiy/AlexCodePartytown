@@ -13,20 +13,15 @@ const GA_TRACKING_ID = "G-1JHZSH8YH4";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <Provider store={store}>
+    {/* Google Analytics */}
     <Head>
       <Partytown debug={true} forward={["dataLayer.push"]} />
       <script
-        src="https://example.com/analytics.js"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         type="text/partytown"
         async
       />
     </Head>
-    {/* Google Analytics */}
-    <Script
-      type="text/partytown"
-      src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-    />
-
     <Script
       type="text/partytown"
       id="google-analytics"
